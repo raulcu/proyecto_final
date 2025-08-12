@@ -1,0 +1,127 @@
+.cart-container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+.cart-container h2 {
+  margin-bottom: 1.5rem;
+  color: #2980b9;
+}
+
+.empty-cart {
+  font-size: 1.1rem;
+  color: #777;
+}
+
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.cart-item-card {
+  display: flex;
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  gap: 1rem;
+  align-items: center;
+}
+
+.cart-item-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  border-radius: 6px;
+  background: white;
+}
+
+.item-details {
+  flex: 1;
+}
+
+.item-details h4 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+  color: #222;
+}
+
+.item-details p {
+  margin: 0.2rem 0;
+}
+
+.remove-btn {
+  margin-top: 0.5rem;
+  background-color: #c0392b;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.remove-btn:hover {
+  background-color: #962d22;
+}
+
+.cart-summary {
+  margin-top: 2rem;
+  text-align: right;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #2980b9;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .cart-item-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cart-item-card img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .cart-summary {
+    text-align: center;
+  }
+}
+.qty-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.7rem;
+}
+
+.qty-controls button {
+  background-color: #2980b9;
+  color: white;
+  border: none;
+  font-weight: 700;
+  padding: 0.2rem 0.8rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
+
+.qty-controls button:hover {
+  background-color: #1c5980;
+}
+
+.qty-controls span {
+  min-width: 25px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.1rem;
+}

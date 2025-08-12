@@ -1,0 +1,113 @@
+/* Centrar todo el contenedor auth-form en pantalla */
+.auth-form {
+  max-width: 380px;
+  margin: auto;
+  padding: 2rem 2.5rem;
+  background: #f4f7f8;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  /* Centrado vertical y horizontal */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.auth-form h2 {
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #2c3e50;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  font-size: 1.9rem;
+}
+
+.auth-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Wrapper para inputs con icono */
+.input-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-group i {
+  position: absolute;
+  left: 14px;
+  color: #7f8c8d;
+  font-size: 1.3rem;
+  pointer-events: none;
+}
+
+/* Inputs con espacio para icono */
+.auth-form input {
+  width: 100%;
+  padding: 0.75rem 0.75rem 0.75rem 3rem; /* espacio para icono */
+  border: 1.8px solid #ccc;
+  border-radius: 8px;
+  font-size: 1.05rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  outline-offset: 2px;
+  color: #34495e;
+  font-weight: 500;
+}
+
+.auth-form input::placeholder {
+  color: #95a5a6;
+  font-weight: 400;
+}
+
+.auth-form input:focus {
+  border-color: #2980b9;
+  box-shadow: 0 0 8px #2980b9aa;
+}
+
+/* Botón estilizado con icono */
+.auth-form button {
+  padding: 0.85rem;
+  background-color: #2980b9;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgb(41 128 185 / 0.4);
+}
+
+.auth-form button i {
+  font-size: 1.3rem;
+}
+
+.auth-form button:hover {
+  background-color: #1c5980;
+  box-shadow: 0 6px 12px rgb(28 89 128 / 0.6);
+}
+
+/* Mensaje de alerta (opcional) */
+.auth-form .alert {
+  background-color: #e74c3c;
+  color: white;
+  padding: 0.8rem;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  animation: fadeIn 0.4s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
