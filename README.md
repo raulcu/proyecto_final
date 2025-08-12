@@ -1,70 +1,76 @@
-# Getting Started with Create React App
+📖 Descripción del Proyecto
+Este proyecto es una aplicación de ecommerce construida con React, que permite a los usuarios:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Visualizar productos.
 
-## Available Scripts
+Ver el detalle de cada producto.
 
-In the project directory, you can run:
+Agregar productos al carrito con cantidades dinámicas.
 
-### `npm start`
+Registrarse e iniciar sesión.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Administrar el carrito desde cualquier parte de la app.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Ver una página de administración (básica).
 
-### `npm test`
+El objetivo fue aprender a manejar React con Router, Context API, localStorage, despliegue en GitHub Pages y diseño responsivo con CSS moderno.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+🛠️ Funcionalidades Desarrolladas
+🔐 Autenticación (Login / Registro)
+Se creó un contexto de autenticación con AuthContext.
 
-### `npm run build`
+El registro guarda nombre y correo en localStorage.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+El login verifica si el usuario existe comparando los datos con localStorage.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Si el usuario no existe, muestra una alerta.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+🛒 Carrito de compras
+Se implementó el CartContext usando Context API.
 
-### `npm run eject`
+El carrito permite agregar productos con una cantidad personalizada.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Si se agrega un producto que ya está en el carrito, se incrementa la cantidad correctamente.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+El carrito es accesible desde cualquier parte de la aplicación gracias al uso de contextos.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+🧾 Detalles del producto
+Página que muestra información completa de un producto.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Permite seleccionar la cantidad antes de agregarlo al carrito.
 
-## Learn More
+🎨 Estilos y UI
+Se utilizaron formularios modernos y centrados, con bordes redondeados, sombras y fuentes legibles.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Cada campo de entrada tiene íconos de FontAwesome (ej: usuario, correo, etc.).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Estilos personalizados para login y registro (Login.css, Register.css).
 
-### Code Splitting
+Diseño centrado y adaptable a diferentes tamaños de pantalla.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+src/
+├── components/
+│   └── Navbar.js
+├── context/
+│   ├── AuthContext.js
+│   └── CartContext.js
+├── pages/
+│   ├── Home.js
+│   ├── ProductDetail.js
+│   ├── Cart.js
+│   ├── Login.js
+│   ├── Register.js
+│   └── Admin.js
+├── services/
+│   └── api.js
+├── App.js
+├── index.js
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+✅ ¿Cómo iniciar el proyecto?
+bash
+Copiar
+Editar
+npm install     # Instala dependencias
+npm start       # Ejecuta el servidor de desarrollo en localhost:3000
+npm run build   # Genera versión de producción
+npm run deploy  # Sube a GitHub Pages
