@@ -22,7 +22,7 @@ export function CartProvider({ children }) {
   // Nueva función para actualizar cantidad
   const updateQuantity = (id, newQty) => {
     if (newQty < 1) {
-      // Opcional: si la cantidad es menor a 1, eliminamos el producto
+      // si la cantidad es menor a 1, eliminamos el producto
       removeFromCart(id);
     } else {
       setCart(cart.map(item => item.id === id ? { ...item, qty: newQty } : item));

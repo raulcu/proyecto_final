@@ -19,7 +19,7 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => setMenuOpen(prev => !prev);
-  const closeMenu = () => setMenuOpen(false); // para cerrar al hacer clic en un link
+  const closeMenu = () => setMenuOpen(false); 
 
   return (
     <nav className="navbar">
