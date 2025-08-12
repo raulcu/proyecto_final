@@ -1,76 +1,51 @@
-📖 Descripción del Proyecto
-Este proyecto es una aplicación de ecommerce construida con React, que permite a los usuarios:
+# Proyecto Final Ecommerce
 
-Visualizar productos.
+## 📖 Descripción del Proyecto
 
-Ver el detalle de cada producto.
+Este proyecto es una **aplicación de ecommerce** construida con **React**, que permite a los usuarios:
 
-Agregar productos al carrito con cantidades dinámicas.
+- Visualizar productos.
+- Ver el detalle de cada producto.
+- Agregar productos al carrito con cantidades dinámicas.
+- Registrarse e iniciar sesión.
+- Administrar el carrito desde cualquier parte de la app.
+- Ver una página de administración (básica).
 
-Registrarse e iniciar sesión.
+El objetivo fue aprender a manejar **React con Router, Context API, localStorage, despliegue en GitHub Pages y diseño responsivo** con CSS moderno.
 
-Administrar el carrito desde cualquier parte de la app.
+---
 
-Ver una página de administración (básica).
+## 🛠️ Funcionalidades Desarrolladas
 
-El objetivo fue aprender a manejar React con Router, Context API, localStorage, despliegue en GitHub Pages y diseño responsivo con CSS moderno.
+### 🔐 Autenticación (Login / Registro)
+- Se creó un contexto de autenticación con `AuthContext`.
+- El **registro** guarda nombre y correo en `localStorage`.
+- El **login** verifica si el usuario existe comparando los datos con `localStorage`.
+- Si el usuario no existe, muestra una alerta.
 
-🛠️ Funcionalidades Desarrolladas
-🔐 Autenticación (Login / Registro)
-Se creó un contexto de autenticación con AuthContext.
+### 🛒 Carrito de compras
+- Se implementó el `CartContext` usando Context API.
+- El carrito permite agregar productos con una cantidad personalizada.
+- Si se agrega un producto que ya está en el carrito, se **incrementa la cantidad** correctamente.
+- El carrito es accesible desde cualquier parte de la aplicación gracias al uso de contextos.
 
-El registro guarda nombre y correo en localStorage.
+### 🧾 Detalles del producto
+- Página que muestra información completa de un producto.
+- Permite seleccionar la cantidad antes de agregarlo al carrito.
 
-El login verifica si el usuario existe comparando los datos con localStorage.
+---
 
-Si el usuario no existe, muestra una alerta.
+## 🎨 Estilos y UI
 
-🛒 Carrito de compras
-Se implementó el CartContext usando Context API.
+- Se utilizaron **formularios modernos y centrados**, con bordes redondeados, sombras y fuentes legibles.
+- Cada campo de entrada tiene **íconos de FontAwesome** (ej: usuario, correo, etc.).
+- Estilos personalizados para login y registro (`Login.css`, `Register.css`).
+- Diseño centrado y adaptable a diferentes tamaños de pantalla.
 
-El carrito permite agregar productos con una cantidad personalizada.
+---
 
-Si se agrega un producto que ya está en el carrito, se incrementa la cantidad correctamente.
+## 🚀 Despliegue en GitHub Pages
 
-El carrito es accesible desde cualquier parte de la aplicación gracias al uso de contextos.
-
-🧾 Detalles del producto
-Página que muestra información completa de un producto.
-
-Permite seleccionar la cantidad antes de agregarlo al carrito.
-
-🎨 Estilos y UI
-Se utilizaron formularios modernos y centrados, con bordes redondeados, sombras y fuentes legibles.
-
-Cada campo de entrada tiene íconos de FontAwesome (ej: usuario, correo, etc.).
-
-Estilos personalizados para login y registro (Login.css, Register.css).
-
-Diseño centrado y adaptable a diferentes tamaños de pantalla.
-
-src/
-├── components/
-│   └── Navbar.js
-├── context/
-│   ├── AuthContext.js
-│   └── CartContext.js
-├── pages/
-│   ├── Home.js
-│   ├── ProductDetail.js
-│   ├── Cart.js
-│   ├── Login.js
-│   ├── Register.js
-│   └── Admin.js
-├── services/
-│   └── api.js
-├── App.js
-├── index.js
-
-✅ ¿Cómo iniciar el proyecto?
-bash
-Copiar
-Editar
-npm install     # Instala dependencias
-npm start       # Ejecuta el servidor de desarrollo en localhost:3000
-npm run build   # Genera versión de producción
-npm run deploy  # Sube a GitHub Pages
+1. Se instaló la dependencia:
+   ```bash
+   npm install gh-pages --save-dev
